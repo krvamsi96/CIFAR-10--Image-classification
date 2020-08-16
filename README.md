@@ -20,4 +20,3 @@ Eg., An image of 6 x 6 x 3 array of matrix of RGB (3 refers to RGB values) and a
 * 8: ship
 * 9: truck
 
-##### In this project, i have create Image classification using  Convolution Neural Network on CIFAR-10 dataset.I have made CNN using Tensorflow library for GPU (Tensorflow is used on CPU but it will take more Time to train Network)by changing Hyperparameters of CNN atlast I have got 81% accuracy on training set..
