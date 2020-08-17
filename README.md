@@ -13,13 +13,14 @@
 7. Prediction
 
 ## Understanding the dataset
-#### The original a batch data is (10000 x 3072) dimensional tensor expressed in numpy array, where the number of columns, (10000), indicates the number of sample data. As stated in the CIFAR-10/CIFAR-100 dataset, the row vector, (3072) represents an color image of 32x32 pixels.
 
-#### Since this project is going to use CNN for the classification tasks, the row vector, (3072), is not an appropriate form of image data to feed. In order to feed an image data into a CNN model, the dimension of the tensor representing an image data should be either (width x height x num_channel) or (num_channel x width x height).
+The original a batch data is (10000 x 3072) dimensional tensor expressed in numpy array, where the number of columns, (10000), indicates the number of sample data. As stated in the CIFAR-10/CIFAR-100 dataset, the row vector, (3072) represents an color image of 32x32 pixels.
 
-#### It depends on your choice (check out the tensorflow conv2d). In this particular project, I am going to use the dimension of the first choice because the default choice in tensorflow's CNN operation is so.
+Since this project is going to use CNN for the classification tasks, the row vector, (3072), is not an appropriate form of image data to feed. In order to feed an image data into a CNN model, the dimension of the tensor representing an image data should be either (width x height x num_channel) or (num_channel x width x height).
 
-#### The row vector (3072) has the exact same number of elements if you calculate 32*32*3==3072. In order to reshape the row vector, (3072), there are two steps required. The first step is involved with using reshape function in numpy, and the second step is involved with using transpose function in numpy as well.
+It depends on your choice (check out the tensorflow conv2d). In this particular project, I am going to use the dimension of the first choice because the default choice in tensorflow's CNN operation is so.
+
+The row vector (3072) has the exact same number of elements if you calculate 32*32*3==3072. In order to reshape the row vector, (3072), there are two steps required. The first step is involved with using reshape function in numpy, and the second step is involved with using transpose function in numpy as well.
 
 ## build the model.
  1. Convolution with 32 different filters in size of (3x3)
